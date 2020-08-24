@@ -1,0 +1,25 @@
+#include<stdio.h>
+int primeNumber(int,int);
+int num, p;
+int main(){
+	printf("Enter any Positive integer number\n");
+	scanf("%d",&num);
+	p = primeNumber(num,num/2);
+	if(p==1){
+	printf("%d is the prime number\n", num);
+}
+	return 0;
+	
+}
+int primeNumber(int num, int i){
+	int n;
+	if(num==1 || i==1){
+		return 1;
+	}
+if(num%i==0){
+	
+		printf("%d is not the prime number",num);		
+}
+else
+    primeNumber(num,i-1);
+}
